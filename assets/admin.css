@@ -1,0 +1,89 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: #f4f6fb;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: #1a1f36;
+    color: white;
+    position: fixed;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 25px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #4f6ef7;
+}
+
+/* MAIN */
+.main {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 15px;
+}
+
+.btn {
+    background: #4f6ef7;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-danger {
+    background: red;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #f0f0f0;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}

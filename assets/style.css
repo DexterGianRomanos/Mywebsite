@@ -1,0 +1,165 @@
+
+/* AUTH BACKGROUND */
+.auth-bg {
+    position: relative;
+    background: linear-gradient(135deg, #1a1f36, #4f6ef7);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+/* BACKGROUND TEXT (FIXED + PREMIUM) */
+.auth-bg::before {
+    content: "JOB SEEKING";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 110px;
+    font-weight: 900;
+    letter-spacing: 14px;
+    white-space: nowrap;
+
+    color: rgba(255, 255, 255, 0.18);
+
+    animation: floatText 6s ease-in-out infinite;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* FLOAT ANIMATION */
+@keyframes floatText {
+    0% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-15px); }
+    100% { transform: translate(-50%, -50%) translateY(0); }
+}
+
+/* AUTH CARD (GLASS PREMIUM) */
+.auth-card {
+    position: relative;
+    z-index: 2;
+    width: 360px;
+    padding: 30px;
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    animation: fadeIn 0.4s ease;
+}
+
+/* FADE IN */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TITLE */
+.auth-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* FORM */
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* LABEL */
+.auth-card label {
+    font-size: 14px;
+    color: #eee;
+}
+
+/* INPUT */
+.auth-card input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.3);
+
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+
+    transition: 0.3s;
+}
+
+/* PLACEHOLDER */
+.auth-card input::placeholder {
+    color: #ccc;
+}
+
+/* FOCUS */
+.auth-card input:focus {
+    outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 6px rgba(255,255,255,0.3);
+}
+
+/* BUTTON */
+.auth-card button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #4f6ef7;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.auth-card button:hover {
+    background: #3b55d1;
+}
+
+/* PASSWORD BOX */
+.password-box {
+    position: relative;
+    width: 100%;
+}
+
+/* PASSWORD INPUT */
+.password-box input {
+    padding-right: 40px;
+}
+
+/* EYE ICON */
+.toggle-eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #ddd;
+    user-select: none;
+}
+
+.toggle-eye:hover {
+    color: #fff;
+}
+
+/* ERROR */
+.error {
+    color: #ff6b6b;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 10px;
+}
